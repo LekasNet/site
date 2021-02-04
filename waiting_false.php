@@ -6,15 +6,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="css/waiting_style.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- <link href="css/menu_style.css" rel="stylesheet" type="text/css" media="screen" /> -->
   
-<?php
 
-  if(!isset($_COOKIE['user'])) {
-  header('Location: https://victoriouspleasanttrial.lekasnet.repl.co/waiting_false.php');
-  }
-?>  
 
 </head>
 
@@ -24,7 +18,7 @@
   <div class="header">
 
     <?php 
-
+    
       if (isset($_COOKIE['user'])) echo '    <div class="btn-group">
       <a class="button1" id="" href="index.php">←</a>
 
@@ -41,17 +35,20 @@
     
   </div>
 
-  <div class="main">
-    <div class="wait-menu">
-      <p>Игроков онлайн:     14743</p>
-      <p>Игроков в поиске:   712</p>
-      <p>Ваш номер очереди:  #P3</p>
+  <div class="content">
+  <?php
+  
+  if (!isset($_COOKIE['user'])) echo '<div class="guest">
+    <p class="mtext">Для начала нужно войти<p>
     </div>
-    <div class="cssload-container">
-	    <div class="cssload-whirlpool"></div>
+    <div class="guest">
+    <a class="button2" id="button2" href="/login.php">Войдите</a>
+  </div>';
+
+  ?>
+
+<div class="main">
+
     </div>
-  </div>
-
-
 </body>
 </html>

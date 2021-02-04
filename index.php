@@ -61,7 +61,7 @@
   <?php
   
   if (!isset($_COOKIE['user'])) echo '<div class="guest">
-    <p class="mtext">Добро пожаловать в нашу уютную компанию!<p>
+    <p class="mtext">Добро пожаловать в сервис по подбору тиммейтов!<p>
     </div>
     <div class="guest">
     <a class="button2" id="button2" href="/login.php">Войдите</a>
@@ -111,7 +111,7 @@
                 <div class="col1-1-3">  
         <div class="card bg-dark text-white" id="card" onClick="window.location.href='/waiting.php'">
                   <div class="card-img-overlay">
-            <h5 class="card-title" id="title">Rainbow 6</h5>
+            <h5 class="card-title" id="title">Rainbow six</h5>
             <p class="card-text" id="description">🟢673 online</p>
           </div>
           <img class="card-img" id="card_image" src="img/siedge.jpeg" alt="Card image" >
