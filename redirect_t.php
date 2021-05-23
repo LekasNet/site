@@ -2,9 +2,7 @@
 
 
  	if(isset($_GET['user'])) {
-
       	setcookie('user', $_GET['user'], time() + 8640000);
-
   	}
   	else {
     	setcookie('user', $_GET['user'], time() - 1);

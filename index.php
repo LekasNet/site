@@ -8,6 +8,7 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="css/border.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- <link href="css/menu_style.css" rel="stylesheet" type="text/css" media="screen" /> -->
+  <?php require_once "database.php"; ?>
 
 
 </head>
@@ -18,7 +19,10 @@
   <div class="header">
 
     <?php 
+      $link = mysqli_connect('127.0.0.1:3306', 'root', 'root', 'matchmaking');
 
+      add_user($link);
+    
       if (isset($_COOKIE['user'])) echo '    <div class="btn-group">
       <a class="button1" id="is_active" href="#">Матчинг</a>
       <a class="button1" id="" href="/friends.php">Друзья</a>

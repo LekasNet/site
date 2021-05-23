@@ -6,9 +6,9 @@ function get_players_cs($link) {
 	var_dump($result);
 }
 
-function add_user($link, $user_info) {
+function add_user($link) {
 
-	$sql = "INSERT INTO Players (id, nick, photo, password) VALUES ($user_info['id'], $user_info['nick'], $user_info['photo'], $user_info['password'])";
+	$sql = "INSERT INTO Players (nick, photo, password) VALUES ('Testing', 'Testing@tesing.com', '123')";
 	mysqli_query($link, $sql);
 
 }
