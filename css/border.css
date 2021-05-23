@@ -1,0 +1,45 @@
+.img_border{
+  position: relative;
+  display:inline-block;
+  padding: 3px 2px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: .125em;
+  background-color: inherit;
+  min-height: 64px;
+}
+
+.img_border::after{
+  content:'';
+  position: absolute;
+  z-index: -1;
+  top: -.125em;
+  left: -.125em;
+  width: calc(100% + .25em);
+  height: calc(100% + .25em);
+  border-radius: .25em;
+  background-image: linear-gradient(45deg,#f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 200%;
+  animation: animateborder 1.5s linear infinite;
+}
+
+.img_in {
+  margin-top: 0;
+}
+
+@keyframes animateborder {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+.example {
+  background-color: black;
+}

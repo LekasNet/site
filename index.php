@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/border.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- <link href="css/menu_style.css" rel="stylesheet" type="text/css" media="screen" /> -->
 
 
@@ -56,6 +57,16 @@
   </div>
 </nav>
 -->
+<div id="panel"> >>>
+    <div id="hidden_panel">
+      <div class="img_border">
+        <img class="img_in" src="img/925.jpg">
+      </div>
+      <a class="f_nick" href="#">
+      привет
+      </a>
+    </div>
+</div>
 
   <div class="content">
   <?php
@@ -66,14 +77,8 @@
     <div class="guest">
     <a class="button2" id="button2" href="/login.php">Войдите</a>
   </div>';
-  else '<audio controls autoplay loop preload>
-  <source src="audio/doom.mp3">
-  <source src="audio/doom.ogg">
-  (здесь должна быть музяка, но ты видимо из каменного века и сидишь на експлорере)
-  </audio>'
-  
   ?>
-
+  </div>
 <div class="main">
 <div class="bumper"></div>
   <div class="container">
@@ -120,6 +125,18 @@
         </div>
     </div>
 
+    <!-- news
+    -->
+
+    <div style="overflow: hidden;">
+      <div style="width: 1000%;">
+          <div  class="line" style="float: left; width: 100px; height: 100px;">content</div>
+          <div style="float: left; width: 100px; height: 100px;">content</div>
+          <div style="float: left; width: 100px; height: 100px;">content++</div>
+      </div>
+    </div>
+
+    </div>
     </div>
 </body>
 </html>
