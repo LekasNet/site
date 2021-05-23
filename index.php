@@ -18,7 +18,7 @@
   <div class="header">
 
     <?php 
-    
+
       if (isset($_COOKIE['user'])) echo '    <div class="btn-group">
       <a class="button1" id="is_active" href="#">Матчинг</a>
       <a class="button1" id="" href="/friends.php">Друзья</a>
