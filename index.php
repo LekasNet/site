@@ -19,9 +19,6 @@
   <div class="header">
 
     <?php 
-      $link = mysqli_connect('127.0.0.1:3306', 'root', 'root', 'matchmaking');
-
-      add_user($link);
     
       if (isset($_COOKIE['user'])) echo '    <div class="btn-group">
       <a class="button1" id="is_active" href="#">Матчинг</a>

@@ -4,8 +4,9 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-
+ 
   <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+   <link rel="stylesheet" href="css/login_style.css">
 
 
 </head>
@@ -30,21 +31,22 @@
     
   </div>
 
-  <?php
-  
-  if (!isset($_COOKIE['user'])) echo '<div class="guest">
-    <p class="mtext">Добро пожаловать в нашу уютную компанию!<p>
-    </div>
-    <div class="guest">
-    <a class="button2" id="button2" href="/login.php">Войдите</a>
-  </div>';
-  else '<audio controls autoplay loop preload>
-  <source src="audio/doom.mp3">
-  <source src="audio/doom.ogg">
-  (здесь должна быть музяка, но ты видимо из каменного века и сидишь на експлорере)
-  </audio>'
-  
-  ?>
+<div id="wrapper">
+  <form id="signin" method="GET" action="/redirect_p.php" autocomplete="off">
+    <input type="text" id="nickname" name="user" placeholder="nickname" />
+    <input type="password" id="pass" name="o_pass" placeholder="old password" />
+    <input type="password" id="pass" name="n_pass" placeholder="new password" />
+    <button type="submit">&#xf0da;</button>
+  </form>
+  <span>
+    <h1>   </h1>
+    <h1>Для изменения аватарки:</h1>
+    <form name="upload" action="download_img.php" method="POST" ENCTYPE="multipart/form-data"> 
+    Выберите файл для загрузки: 
+    <input type="file" name="userfile" id="userfile">
+    <input type="submit" name="upload" id="upload" value="Загрузить"> 
+    </form>
+</div>
 
 </body>
 </html>
