@@ -35,8 +35,10 @@ function update_user($link, $nick, $o_pass, $n_pass) {
 			$result = mysqli_query($link, $sql);
 			return 0;
 
+
 		}
 		else {
+			echo "'".$_COOKIE['user']."' == '".$user['password']."' == '".$o_pass."'";
 			return 1;
 		}
 	}
@@ -46,8 +48,6 @@ function update_user($link, $nick, $o_pass, $n_pass) {
 		$sql = "UPDATE players SET nick = '".$nick."' WHERE nick = '".$_COOKIE['user']."'";
 		$result = mysqli_query($link, $sql);
 
-	}
-	else {
 	}
 	return 0;
 }
